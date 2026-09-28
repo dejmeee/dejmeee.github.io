@@ -4,11 +4,11 @@ import HeaderNav from './HeaderNav.vue'
 
 <template>
   <div
-    class="min-h-screen grid grid-cols-6 bg-mist-100 dark:bg-mist-900 text-black dark:text-white"
+    class="min-h-screen md:grid md:grid-cols-6 bg-mist-100 dark:bg-mist-950 text-black dark:text-white"
   >
     <div></div>
     <main class="col-span-4">
-      <nav><HeaderNav></HeaderNav></nav>
+      <HeaderNav></HeaderNav>
       <slot />
     </main>
     <div></div>
