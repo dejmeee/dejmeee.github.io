@@ -1,13 +1,13 @@
-import AboutView from '@/views/AboutView.vue'
 import BlogView from '@/views/BlogView.vue'
 import HomeView from '@/views/HomeView.vue'
+import ProjectsView from '@/views/ProjectsView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', component: HomeView },
-    { path: '/about', component: AboutView },
+    { path: '/projects', component: ProjectsView },
     { path: '/blog', component: BlogView },
   ],
 })
