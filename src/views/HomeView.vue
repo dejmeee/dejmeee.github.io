@@ -4,19 +4,20 @@ import ContentBox from '@/templates/ContentBox.vue'
 
 <template>
   <ContentBox>
-    <div class="flex flex-col sm:flex-row gap-7">
+    <div class="flex flex-col sm:flex-row gap-6">
       <!-- Sidebar with info -->
-      <aside class="w-1/6 md:w-1/5 shrink-0 flex sm:flex-col gap-1">
+      <aside class="w-1/3 md:w-1/5 shrink-0 flex sm:flex-col gap-2.5 md:gap-1">
         <!-- Pfp -->
         <img
           src="https://avatars.githubusercontent.com/u/155079832"
           alt="My profile picture"
-          class="w-full border-3 border-amber-400/30 dark:border-amber-500/30"
+          class="w-full border-3 border-pfp-primary/50"
         />
 
         <!-- Socials -->
         <div flex flex-col gap-3>
-          <div class="flex items-center gap-1">
+          <p class="font-bold text-2xl">Socials</p>
+          <div class="flex items-center gap-2">
             <svg
               role="img"
               viewBox="0 0 24 24"
@@ -31,7 +32,7 @@ import ContentBox from '@/templates/ContentBox.vue'
             </svg>
             <a href="https://x.com/dejmeee" class="hover:underline">@dejmeee</a>
           </div>
-          <div class="flex items-center gap-1">
+          <div class="flex items-center gap-2">
             <svg
               role="img"
               viewBox="0 0 24 24"
@@ -50,10 +51,15 @@ import ContentBox from '@/templates/ContentBox.vue'
       </aside>
 
       <!-- Content -->
-      <div class="flex-1">
-        <h1 class="text-3xl font-medium">Hi there!</h1>
-        <p>I'm Dejmeee and welcome to my site!</p>
-        <p>This is a demo :D</p>
+      <div class="flex-1 md:text-lg">
+        <!-- <div class="bg-amber-400/20 border-2 border-amber-500/20 justify-self-center w-1/2 py-6">
+          <p class="flex justify-center">🚧 Site under construction 🚧</p>
+        </div> -->
+        <h1 class="text-2xl md:text-4xl font-medium">Hi there!</h1>
+        <p>
+          I'm Dejmeee and welcome to my site! I am a 17 year old computer science student from
+          Czechia.
+        </p>
       </div>
     </div>
   </ContentBox>

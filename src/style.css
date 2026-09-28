@@ -6,10 +6,8 @@
 @theme {
   --font-geist-mono: 'Geist Mono', 'Roboto Mono', monospace;
 }
+
 /* Colors */
-/* @theme {
-  --color-primary: #000000;
-  --color-secondary: #000000;
-  --color-background: #000000;
-  --color-surface: #000000;
-} */
+@theme {
+  --color-pfp-primary: var(--color-amber-400);
+}
