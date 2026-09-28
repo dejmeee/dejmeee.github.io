@@ -5,6 +5,7 @@ import ContentBox from '@/templates/ContentBox.vue'
 <template>
   <ContentBox>
     <div class="flex flex-col sm:flex-row gap-7">
+      <!-- Sidebar with info -->
       <aside class="w-1/6 md:w-1/5 shrink-0 flex sm:flex-col gap-1">
         <!-- Pfp -->
         <img
