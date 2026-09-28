@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <nav
-    class="py-5 px-3 flex justify-between bg-mist-200 dark:bg-mist-900 border-b-2 sm:border-2 sm:mt-3 border-mist-300 dark:border-mist-800"
+    class="py-4 px-6 flex justify-between bg-mist-200 dark:bg-mist-900 border-b-2 sm:border-2 sm:mt-4 border-mist-300 dark:border-mist-800"
   >
     <RouterLink to="/"
       ><h1
@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router'
         dejmeee's place
       </h1></RouterLink
     >
-    <div class="flex gap-3 lg:text-xl items-center">
+    <div class="flex gap-5 lg:text-xl items-center">
       <RouterLink to="/projects" class="hover:underline hover:text-pfp-primary"
         >Projects</RouterLink
       >
