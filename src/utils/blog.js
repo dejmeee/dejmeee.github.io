@@ -11,7 +11,9 @@ export const blogPosts = Object.entries(posts)
     const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/)
 
     if (!match) {
-      throw new Error(`Missing frontmatter in ${path}`)
+      // throw new Error(`Missing frontmatter in ${path}`)
+      console.warn(`Skipping blog post without frontmatter: ${path}`)
+      return null
     }
 
     const [, frontmatter, content] = match

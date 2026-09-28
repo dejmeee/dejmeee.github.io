@@ -19,14 +19,16 @@ const html = computed(() => {
   <ContentBox>
     <main v-if="post">
       <article>
-        <h1>{{ post.title }}</h1>
+        <RouterLink to="/blog">Back</RouterLink>
+        <!-- <aside>
+          <h1>{{ post.title }}</h1>
 
-        <p v-if="post.description">
-          {{ post.description }}
-        </p>
+          <p v-if="post.description">
+            {{ post.description }}
+          </p>
 
-        <time>{{ post.date }}</time>
-
+          <time>{{ post.date }}</time>
+        </aside> -->
         <div class="prose dark:prose-invert" v-html="html" />
       </article>
     </main>

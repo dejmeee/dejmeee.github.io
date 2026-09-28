@@ -13,6 +13,11 @@
   --color-pfp-primary: var(--color-amber-400);
 }
 
+/* Containers */
+.primary-container {
+  @apply bg-mist-200 dark:bg-mist-900 border-b-2 sm:border-2 border-mist-300 dark:border-mist-800;
+}
+
 /* Prose */
 .prose {
   max-width: none;

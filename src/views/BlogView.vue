@@ -5,13 +5,19 @@ import { blogPosts } from '../utils/blog'
 
 <template>
   <ContentBox>
-    <article v-for="post in blogPosts" :key="post.slug" class="bg-mist-500 mb-4 p-4">
-      <RouterLink :to="`/blog/${post.slug}`">
+    <article v-for="post in blogPosts" :key="post.slug" class="primary-container mb-3">
+      <RouterLink :to="`/blog/${post.slug}`" class="block p-4">
         <h2>{{ post.title }}</h2>
 
         <p>{{ post.description }}</p>
 
         <time>{{ post.date }}</time>
+
+        <div v-if="post.tags?.length" class="flex gap-1">
+          <span v-for="tag in post.tags" :key="tag">
+            {{ tag }}
+          </span>
+        </div>
       </RouterLink>
     </article>
   </ContentBox>

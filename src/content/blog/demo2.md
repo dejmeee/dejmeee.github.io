@@ -2,6 +2,9 @@
 title: demo2
 description: Second example blog post
 date: 2026-09-28
+tags:
+  - demo
+  - test
 ---
 
 # Hello Markdown World
