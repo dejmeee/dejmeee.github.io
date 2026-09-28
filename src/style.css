@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
@@ -10,4 +11,20 @@
 /* Colors */
 @theme {
   --color-pfp-primary: var(--color-amber-400);
+}
+
+/* Prose */
+.prose {
+  max-width: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: inherit;
+  font-weight: 600;
+  /* letter-spacing: -0.02em; */
 }

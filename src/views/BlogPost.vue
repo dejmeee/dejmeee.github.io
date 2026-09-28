@@ -27,7 +27,7 @@ const html = computed(() => {
 
         <time>{{ post.date }}</time>
 
-        <div class="post-content" v-html="html" />
+        <div class="prose dark:prose-invert" v-html="html" />
       </article>
     </main>
 
