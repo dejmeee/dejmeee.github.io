@@ -1,12 +1,18 @@
 <script setup>
 import ContentBox from '@/templates/ContentBox.vue'
+import { blogPosts } from '../utils/blog'
 </script>
 
 <template>
   <ContentBox>
-    <div class="p-48 w-full flex flex-col gap-2 items-center">
-      <h1 class="text-6xl font-medium">(o_o)</h1>
-      <h2 class="text-4xl">Nothing here yet...</h2>
-    </div>
+    <article v-for="post in blogPosts" :key="post.slug" class="bg-mist-500 mb-4 p-4">
+      <RouterLink :to="`/blog/${post.slug}`">
+        <h2>{{ post.title }}</h2>
+
+        <p>{{ post.description }}</p>
+
+        <time>{{ post.date }}</time>
+      </RouterLink>
+    </article>
   </ContentBox>
 </template>
