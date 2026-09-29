@@ -31,5 +31,18 @@
 .prose h4 {
   color: inherit;
   font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.5rem;
   /* letter-spacing: -0.02em; */
+}
+.prose p {
+  margin: 0;
+  margin-bottom: 0.3rem;
+}
+.prose p::before,
+.prose p::after {
+  content: none;
+}
+.prose pre {
+  background-color: oklch(21.8% 0.008 223.9);
 }
