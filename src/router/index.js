@@ -1,3 +1,4 @@
+import BlogPost from '@/views/BlogPost.vue'
 import BlogView from '@/views/BlogView.vue'
 import HomeView from '@/views/HomeView.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
@@ -9,6 +10,7 @@ const router = createRouter({
     { path: '/', component: HomeView },
     { path: '/projects', component: ProjectsView },
     { path: '/blog', component: BlogView },
+    { path: '/blog/:slug', component: BlogPost },
   ],
 })
 

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
@@ -10,4 +11,38 @@
 /* Colors */
 @theme {
   --color-pfp-primary: var(--color-amber-400);
+}
+
+/* Containers */
+.primary-container {
+  @apply bg-mist-200 dark:bg-mist-900 border-b-2 sm:border-2 border-mist-300 dark:border-mist-800;
+}
+
+/* Prose */
+.prose {
+  max-width: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: inherit;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  /* letter-spacing: -0.02em; */
+}
+.prose p {
+  margin: 0;
+  margin-bottom: 0.3rem;
+}
+.prose p::before,
+.prose p::after {
+  content: none;
+}
+.prose pre {
+  background-color: oklch(21.8% 0.008 223.9);
 }
