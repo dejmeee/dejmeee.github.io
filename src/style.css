@@ -1,4 +1,9 @@
 /* === Fonts === */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap");
+
+@theme {
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+}
 
 /* === Packages === */
 @import "tailwindcss";
@@ -33,3 +38,13 @@
 }
 
 /* === Styles === */
+.primary-container {
+  @apply bg-tinted-surface-300 dark:bg-tinted-surface-900 border-2 border-tinted-surface-400 dark:border-tinted-surface-800;
+}
+
+.tab-focus button:focus-visible,
+.tab-focus a:focus-visible,
+.tab-focus input:focus-visible,
+.tab-focus textarea:focus-visible {
+  @apply outline-2 outline-offset-2 outline-tinted-primary-400;
+}

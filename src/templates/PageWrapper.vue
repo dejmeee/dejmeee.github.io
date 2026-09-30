@@ -5,11 +5,11 @@ import PageHeader from "./PageHeader.vue"
 
 <template>
   <div
-    class="min-h-screen bg-tinted-surface-200 dark:bg-tinted-surface-950 text-black dark:text-white md:flex justify-center">
-    <div class="mx-auto w-full max-w-7xl min-h-screen flex flex-col">
+    class="min-h-screen md:flex justify-center bg-tinted-surface-200 dark:bg-tinted-surface-950 text-black dark:text-white">
+    <div class="mx-auto w-full max-w-7xl min-h-screen flex flex-col tab-focus">
       <PageHeader></PageHeader>
       <main class="px-4 xl:px-2"><slot /></main>
-      <PageFooter class="mt-auto py-1"></PageFooter>
+      <PageFooter></PageFooter>
     </div>
   </div>
 </template>
