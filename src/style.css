@@ -1,7 +1,7 @@
 /* === Fonts === */
 
 /* === Packages === */
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 /* === Colors === */
@@ -18,17 +18,18 @@
   --color-tinted-primary-900: var(--color-amber-900);
   --color-tinted-primary-950: var(--color-amber-950);
 
-  --color-tinted-surface-50: var(--color-stone-50);
-  --color-tinted-surface-100: var(--color-stone-100);
-  --color-tinted-surface-200: var(--color-stone-200);
-  --color-tinted-surface-300: var(--color-stone-300);
-  --color-tinted-surface-400: var(--color-stone-400);
-  --color-tinted-surface-500: var(--color-stone-500);
-  --color-tinted-surface-600: var(--color-stone-600);
-  --color-tinted-surface-700: var(--color-stone-700);
-  --color-tinted-surface-800: var(--color-stone-800);
-  --color-tinted-surface-900: var(--color-stone-900);
-  --color-tinted-surface-950: var(--color-stone-950);
+  --color-tinted-surface-50: var(--color-mist-50);
+  --color-tinted-surface-100: var(--color-mist-100);
+  --color-tinted-surface-200: var(--color-mist-200);
+  --color-tinted-surface-300: var(--color-mist-300);
+  --color-tinted-surface-400: var(--color-mist-400);
+  --color-tinted-surface-500: var(--color-mist-500);
+  --color-tinted-surface-600: var(--color-mist-600);
+  --color-tinted-surface-700: var(--color-mist-700);
+  --color-tinted-surface-800: var(--color-mist-800);
+  --color-tinted-surface-900: var(--color-mist-900); /* oklch(21.8% 0.008 223.9); */
+  /* --color-tinted-surface-925: oklch(17.8% 0.004 228.8); /* oklch(17.8% 0.004 228.8); */
+  --color-tinted-surface-950: var(--color-mist-950); /* oklch(14.8% 0.004 228.8); */
 }
 
 /* === Styles === */
