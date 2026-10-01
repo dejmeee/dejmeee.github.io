@@ -6,9 +6,9 @@ import PageHeader from "./PageHeader.vue"
 <template>
   <div
     class="min-h-screen md:flex justify-center bg-tinted-surface-200 dark:bg-tinted-surface-950 text-black dark:text-white">
-    <div class="mx-auto w-full max-w-7xl min-h-screen flex flex-col tab-focus">
+    <div class="mx-auto w-full max-w-6xl min-h-screen flex flex-col tab-focus">
       <PageHeader></PageHeader>
-      <main class="px-4 xl:px-2"><slot /></main>
+      <main class="px-5 xl:px-2"><slot /></main>
       <PageFooter></PageFooter>
     </div>
   </div>

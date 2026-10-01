@@ -14,8 +14,8 @@ const router = createRouter({
     { path: "/blog", component: BlogPage, meta: { title: "blog - dejmeee" } },
     { path: "/blog/:slug", component: BlogPost },
     // Errors
-    { path: "/:pathMatch(.*)*", redirect: "/error/404" },
     { path: "/error/:code", name: "error-page", component: ErrorPage, meta: { title: "error - dejmeee" } },
+    { path: "/:pathMatch(.*)*", redirect: "/error/404" },
   ],
 })
 

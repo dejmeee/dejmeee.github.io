@@ -1,13 +1,12 @@
-/* === Fonts === */
+/* === Imports === */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
+/* === Fonts === */
 @theme {
   --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
-
-/* === Packages === */
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
 /* === Colors === */
 @theme {
@@ -33,7 +32,7 @@
   --color-tinted-surface-700: var(--color-mist-700);
   --color-tinted-surface-800: var(--color-mist-800);
   --color-tinted-surface-900: var(--color-mist-900); /* oklch(21.8% 0.008 223.9); */
-  /* --color-tinted-surface-925: oklch(17.8% 0.004 228.8); /* oklch(17.8% 0.004 228.8); */
+  --color-tinted-surface-925: oklch(17.8% 0.004 228.8); /* oklch(17.8% 0.004 228.8); */
   --color-tinted-surface-950: var(--color-mist-950); /* oklch(14.8% 0.004 228.8); */
 }
 
@@ -41,10 +40,20 @@
 .primary-container {
   @apply bg-tinted-surface-300 dark:bg-tinted-surface-900 border-2 border-tinted-surface-400 dark:border-tinted-surface-800;
 }
+.secondary-container {
+  @apply bg-tinted-surface-400 dark:bg-tinted-surface-800 border-2 border-tinted-surface-500 dark:border-tinted-surface-700;
+}
 
 .tab-focus button:focus-visible,
 .tab-focus a:focus-visible,
 .tab-focus input:focus-visible,
 .tab-focus textarea:focus-visible {
-  @apply outline-2 outline-offset-2 outline-tinted-primary-400;
+  @apply outline-2 outline-offset-2 outline-tinted-primary-600 dark:outline-tinted-primary-400;
 }
+
+/* Prose */
+
+/* Prototype */
+/* a {
+  @apply hover:underline hover:text-tinted-primary-500 dark:hover:text-tinted-primary-300 active:text-tinted-primary-600 dark:active:text-tinted-primary-500;
+} */

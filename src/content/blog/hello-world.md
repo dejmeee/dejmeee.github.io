@@ -1,7 +1,8 @@
 ---
 title: Hello World
 description: First example blog post
-date: 2026-09-28
+date_published: 2026-09-28
+date_edited: 2026-10-01
 tags:
   - hello
   - world
