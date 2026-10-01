@@ -47,7 +47,8 @@
 .tab-focus button:focus-visible,
 .tab-focus a:focus-visible,
 .tab-focus input:focus-visible,
-.tab-focus textarea:focus-visible {
+.tab-focus textarea:focus-visible,
+.tab-focus pre:focus-visible {
   @apply outline-2 outline-offset-2 outline-tinted-primary-600 dark:outline-tinted-primary-400;
 }
 
@@ -91,6 +92,14 @@
 .prose pre {
   background-color: oklch(21.8% 0.008 223.9);
   border-radius: 0;
+}
+
+.prose pre.shiki {
+  overflow-x: auto;
+}
+
+.prose pre.shiki code {
+  background: transparent;
 }
 
 /* Lists */

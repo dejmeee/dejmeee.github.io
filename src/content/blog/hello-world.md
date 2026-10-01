@@ -11,7 +11,7 @@ tags:
 
 # Hello Markdown World
 
-This is an _example of_ **a blog** _**post!**_
+This is _an example_ **of a** _**blog post!**_
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis exercitationem nulla sunt iure qui consectetur unde nemo alias dolorem libero dignissimos quis vitae pariatur molestias, optio quidem laborum quibusdam maiores!
 
@@ -21,10 +21,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illum ipsam dol
 - lists
   - and more lists
 
+[A link even?](/#/blog)
+
 ## Second level heading
 
-```
-and a codeblock!
+```js
+const msg = "Hello markdown world!"
+
+console.log(msg)
 ```
 
 ### Third level heading

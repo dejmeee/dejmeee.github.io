@@ -1,8 +1,9 @@
 <script setup>
 import { computed } from "vue"
 import { useRoute } from "vue-router"
-import { ref, onMounted, onUnmounted } from "vue"
+import { ref, onMounted, onUnmounted, watch } from "vue"
 import { marked } from "marked"
+import { renderMarkdown } from "@/utils/markdown"
 import { getPost } from "@/utils/blog"
 import { randomErrorKaomoji } from "@/utils/kaomoji"
 import PageWrapper from "@/templates/PageWrapper.vue"
@@ -13,10 +14,28 @@ const kaomoji = randomErrorKaomoji()
 // Post data
 const route = useRoute()
 const post = computed(() => getPost(route.params.slug))
-const html = computed(() => {
-  if (!post.value) return ""
-  return marked(post.value.content)
-})
+// const html = computed(() => {
+//   if (!post.value) return ""
+//   return marked(post.value.content)
+// })
+
+const html = ref("")
+const isRendering = ref(false)
+
+watch(
+  () => post.value?.content,
+  async (content) => {
+    if (!content) {
+      html.value = ""
+      return
+    }
+
+    isRendering.value = true
+    html.value = await renderMarkdown(content)
+    isRendering.value = false
+  },
+  { immediate: true },
+)
 
 // Up button
 const scrollToTop = () => {
@@ -40,7 +59,9 @@ onUnmounted(() => {
 
 <template>
   <PageWrapper>
-    <div v-if="post">
+    <div v-if="isRendering">Loading code...</div>
+
+    <div v-else-if="post">
       <article>
         <div class="prose dark:prose-invert mt-4" v-html="html" />
       </article>
