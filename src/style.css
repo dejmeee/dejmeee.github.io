@@ -51,7 +51,55 @@
   @apply outline-2 outline-offset-2 outline-tinted-primary-600 dark:outline-tinted-primary-400;
 }
 
-/* Prose */
+/* === Prose === */
+.prose {
+  max-width: none;
+  color: inherit;
+}
+
+/* Text */
+.prose p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: inherit;
+  font-weight: 700;
+  margin: 0;
+}
+
+.prose h1,
+.prose h2 {
+  margin-bottom: 0.75rem;
+}
+
+.prose h1,
+.prose h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Quotes around citations */
+.prose p::before,
+.prose p::after {
+  content: none;
+}
+
+/* Codeblock */
+.prose pre {
+  background-color: oklch(21.8% 0.008 223.9);
+  border-radius: 0;
+}
+
+/* Lists */
+.prose ul,
+.prose ol,
+.prose li {
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
 
 /* Prototype */
 /* a {

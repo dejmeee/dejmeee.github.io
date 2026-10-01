@@ -9,7 +9,6 @@ import { RouterLink } from "vue-router"
       <ul class="flex gap-4 md:text-lg items-center">
         <li><RouterLink to="/about" class="nav-link"> About </RouterLink></li>
         <li><RouterLink to="/blog" class="nav-link"> Blog </RouterLink></li>
-        <li><RouterLink to="/not-a-page" class="nav-link"> 404 Test </RouterLink></li>
       </ul>
     </nav>
   </header>

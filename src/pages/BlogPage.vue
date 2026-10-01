@@ -40,8 +40,9 @@ const formatDate = (date) => {
               <time :datetime="post.date_edited">{{ formatDate(post.date_edited) }}</time>
             </div>
           </div>
-          <ul v-if="post.tags?.length" class="flex gap-1.5 md:justify-end">
-            <li v-for="tag in post.tags" :key="tag" class="secondary-container py-1 px-2">{{ tag }}</li>
+          <ul v-if="post.tags?.length" class="flex gap-1.5 md:justify-end items-center">
+            <li class="text-black/60 dark:text-white/60">Tags:</li>
+            <li v-for="tag in post.tags" :key="tag" class="post-container-secondary py-1 px-2">{{ tag }}</li>
           </ul>
         </div>
       </RouterLink>
@@ -62,6 +63,18 @@ const formatDate = (date) => {
 
   @variant focus {
     @apply bg-tinted-surface-400 dark:bg-tinted-surface-925 border-2 border-tinted-surface-500 dark:border-tinted-surface-900;
+  }
+}
+
+.post-container-secondary {
+  @apply bg-tinted-surface-400 dark:bg-tinted-surface-800 border-2 border-tinted-surface-500 dark:border-tinted-surface-700;
+
+  @variant group-active {
+    @apply bg-tinted-surface-500 dark:bg-tinted-surface-900 border-2 border-tinted-surface-600 dark:border-tinted-surface-800;
+  }
+
+  @variant group-focus {
+    @apply bg-tinted-surface-500 dark:bg-tinted-surface-900 border-2 border-tinted-surface-600 dark:border-tinted-surface-800;
   }
 }
 </style>

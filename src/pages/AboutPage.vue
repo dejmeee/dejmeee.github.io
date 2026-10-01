@@ -5,5 +5,6 @@ import PageWrapper from "@/templates/PageWrapper.vue"
 <template>
   <PageWrapper>
     <h1 class="text-3xl mb-3">About</h1>
+    <p>An about page</p>
   </PageWrapper>
 </template>
