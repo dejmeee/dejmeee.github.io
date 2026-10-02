@@ -22,6 +22,18 @@
   --color-tinted-primary-900: var(--color-amber-900);
   --color-tinted-primary-950: var(--color-amber-950);
 
+  --color-tinted-secondary-50: var(--color-blue-50);
+  --color-tinted-secondary-100: var(--color-blue-100);
+  --color-tinted-secondary-200: var(--color-blue-200);
+  --color-tinted-secondary-300: var(--color-blue-300);
+  --color-tinted-secondary-400: var(--color-blue-400);
+  --color-tinted-secondary-500: var(--color-blue-500);
+  --color-tinted-secondary-600: var(--color-blue-600);
+  --color-tinted-secondary-700: var(--color-blue-700);
+  --color-tinted-secondary-800: var(--color-blue-800);
+  --color-tinted-secondary-900: var(--color-blue-900);
+  --color-tinted-secondary-950: var(--color-blue-950);
+
   --color-tinted-surface-50: var(--color-mist-50);
   --color-tinted-surface-100: var(--color-mist-100);
   --color-tinted-surface-200: var(--color-mist-200);
