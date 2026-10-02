@@ -61,6 +61,10 @@ const formatDate = (date) => {
     @apply bg-tinted-surface-400 dark:bg-tinted-surface-925 border-2 border-tinted-surface-500 dark:border-tinted-surface-900;
   }
 
+  @variant hover {
+    @apply transition-transform duration-150 scale-99;
+  }
+
   @variant focus {
     @apply bg-tinted-surface-400 dark:bg-tinted-surface-925 border-2 border-tinted-surface-500 dark:border-tinted-surface-900;
   }
@@ -71,6 +75,10 @@ const formatDate = (date) => {
 
   @variant group-active {
     @apply bg-tinted-surface-500 dark:bg-tinted-surface-900 border-2 border-tinted-surface-600 dark:border-tinted-surface-800;
+  }
+
+  @variant group-hover {
+    @apply transition-transform duration-150 scale-99;
   }
 
   @variant group-focus {

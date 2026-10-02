@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue"
+import { computed, Transition } from "vue"
 import { useRoute } from "vue-router"
 import { ref, onMounted, onUnmounted, watch } from "vue"
 import { marked } from "marked"
@@ -73,11 +73,13 @@ onUnmounted(() => {
       <RouterLink to="/blog" class="button-container px-4 py-2">Go back to the blog list</RouterLink>
     </div>
 
-    <button v-if="showButton" class="fixed right-6 bottom-6 primary-container" @click="scrollToTop">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" class="h-8">
-        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
-      </svg>
-    </button>
+    <Transition name="fade">
+      <button v-if="showButton" class="fixed right-6 bottom-6 primary-container p-2" @click="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" class="h-8">
+          <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+      </button>
+    </Transition>
   </PageWrapper>
 </template>
 
@@ -94,5 +96,18 @@ onUnmounted(() => {
   @variant focus {
     @apply bg-tinted-surface-400 dark:bg-tinted-surface-925 border-2 border-tinted-surface-500 dark:border-tinted-surface-900;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 150ms ease,
+    transform 250ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
