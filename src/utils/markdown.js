@@ -3,8 +3,8 @@ import markedShiki from "marked-shiki"
 import { createHighlighter } from "shiki"
 
 const highlighter = await createHighlighter({
-  themes: ["one-dark-pro"],
-  langs: ["javascript", "typescript", "vue", "html", "css", "json", "bash", "markdown"],
+  themes: ["ayu-dark", "ayu-light"],
+  langs: ["javascript", "typescript", "vue", "html", "css", "json", "markdown"],
 })
 
 const markdown = new Marked().use(
@@ -12,7 +12,8 @@ const markdown = new Marked().use(
     highlight(code, lang) {
       return highlighter.codeToHtml(code, {
         lang: lang || "text",
-        theme: "one-dark-pro",
+        themes: { light: "ayu-light", dark: "ayu-dark" },
+        defaultColor: "light-dark()",
       })
     },
   }),

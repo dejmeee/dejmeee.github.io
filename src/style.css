@@ -102,6 +102,11 @@
   background: transparent;
 }
 
+/* to make light-dark() work, markdown.js:16 */
+:root {
+  color-scheme: light dark;
+}
+
 /* Lists */
 .prose ul,
 .prose ol,
